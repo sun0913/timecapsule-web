@@ -1,0 +1,21 @@
+<!-- public/icons/token.svg -->
+<svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- 外圈 -->
+    <circle cx="30" cy="30" r="20" stroke="white" stroke-width="2" fill="none"/>
+
+    <!-- 内圈 -->
+    <circle cx="30" cy="30" r="15" stroke="white" stroke-width="1.5" fill="none"/>
+
+    <!-- TIME文字 -->
+    <text x="30" y="28" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="white" text-anchor="middle">TIME</text>
+
+    <!-- 星星装饰 -->
+    <path d="M30 35 L31.5 38 L35 38 L32.5 40 L33.5 43 L30 41 L26.5 43 L27.5 40 L25 38 L28.5 38 Z"
+          fill="white" stroke="white" stroke-width="0.5"/>
+
+    <!-- 光芒效果 -->
+    <path d="M30 8 L30 12 M30 48 L30 52 M52 30 L48 30 M12 30 L8 30"
+          stroke="white" stroke-width="1.5" opacity="0.6"/>
+    <path d="M44 16 L41 19 M19 41 L16 44 M44 44 L41 41 M19 19 L16 16"
+          stroke="white" stroke-width="1.5" opacity="0.6"/>
+</svg>

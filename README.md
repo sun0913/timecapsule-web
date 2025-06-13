@@ -1,2 +1,2 @@
-# timepost-web-pc
+# timecapsule-web
 PC 端 web

@@ -1,0 +1,117 @@
+// 滚动条样式
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: $border-extra-light;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $border-light;
+  border-radius: 4px;
+
+  &:hover {
+    background: $border-base;
+  }
+}
+
+// 卡片样式
+.el-card {
+  border-radius: 8px;
+  border: none;
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.05);
+
+  .el-card__header {
+    padding: 20px;
+    border-bottom: 1px solid $border-lighter;
+    font-weight: 500;
+  }
+
+  .el-card__body {
+    padding: 20px;
+  }
+}
+
+// 按钮样式增强
+.el-button {
+  border-radius: 6px;
+  font-weight: 500;
+
+  &--primary {
+    background: $primary-color;
+    border-color: $primary-color;
+
+    &:hover,
+    &:focus {
+      background: lighten($primary-color, 10%);
+      border-color: lighten($primary-color, 10%);
+    }
+  }
+}
+
+// 输入框样式增强
+.el-input {
+  .el-input__inner {
+    border-radius: 6px;
+
+    &:hover {
+      border-color: $primary-color;
+    }
+
+    &:focus {
+      border-color: $primary-color;
+    }
+  }
+}
+
+// 动画
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+// 工具类
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.mt-sm {
+  margin-top: $spacing-sm;
+}
+
+.mt-md {
+  margin-top: $spacing-md;
+}
+
+.mt-lg {
+  margin-top: $spacing-lg;
+}
+
+.mb-sm {
+  margin-bottom: $spacing-sm;
+}
+
+.mb-md {
+  margin-bottom: $spacing-md;
+}
+
+.mb-lg {
+  margin-bottom: $spacing-lg;
+}

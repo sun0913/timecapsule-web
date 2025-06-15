@@ -32,6 +32,10 @@
             <el-icon><User /></el-icon>
             <span>笔友</span>
           </el-menu-item>
+          <el-menu-item index="/system/config" v-if="userInfo?.roles?.includes('ADMIN')">
+            <el-icon><Setting /></el-icon>
+            <span>系统管理</span>
+          </el-menu-item>
         </el-menu>
       </div>
 

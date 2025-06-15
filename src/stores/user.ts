@@ -22,7 +22,15 @@ export const useUserStore = defineStore('user', () => {
             localStorage.setItem('refreshToken', refreshToken.value)
 
             ElMessage.success('登录成功')
-            router.push('/')
+
+            // 检查是否有重定向路径
+            const redirectPath = sessionStorage.getItem('redirectPath')
+            if (redirectPath) {
+                sessionStorage.removeItem('redirectPath')
+                router.push(redirectPath)
+            } else {
+                router.push('/')
+            }
 
             // 获取用户信息
             await fetchUserInfo()
@@ -43,6 +51,8 @@ export const useUserStore = defineStore('user', () => {
             localStorage.setItem('refreshToken', refreshToken.value)
 
             ElMessage.success('注册成功')
+
+            // 注册成功后跳转到主页
             router.push('/')
 
             // 获取用户信息
@@ -74,7 +84,8 @@ export const useUserStore = defineStore('user', () => {
         localStorage.removeItem('token')
         localStorage.removeItem('refreshToken')
 
-        router.push('/login')
+        router.push('/')  // 退出后跳转到主页而不是登录页
+        ElMessage.success('已退出登录')
     }
 
     return {
